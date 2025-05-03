@@ -46,6 +46,19 @@ The B-Tree now supports inserting into an empty tree. Today’s goal is to suppo
 **End of Session Reflection:**
 I successfully inserted multiple key/value pairs into the root node, preserving sorted order. The insert function reads the root, updates it in memory, and writes it back to disk. Tomorrow I’ll add node-splitting logic.
 
+## 2025-05-03 17:45
+
+**Thoughts So Far:**
+The tree now allows inserting into a single leaf node, but we need true B-Tree behavior: splitting full nodes and managing multiple levels. I’ll implement root splitting today, followed by recursive splits in child nodes.
+
+**Plan:**
+- Detect when the root is full
+- Allocate two new child nodes from the root’s contents
+- Promote the middle key to a new root
+- Adjust `insert()` to allow recursive insert into children
+
+**End of Session Reflection:**
+Root node splitting works! The tree now supports a second level. This required adjusting insert logic, maintaining sorted keys, and correctly writing nodes to disk. I’ve laid the foundation for recursive insertion into child nodes, which comes next.
 
 
 
