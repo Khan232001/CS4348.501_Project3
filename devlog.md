@@ -32,6 +32,21 @@ Yesterday I implemented the `create` command and set up the header format. Today
 
 **End of Session Reflection:**
 The `insert` command now successfully adds a key/value pair to an empty tree and updates the root. I confirmed it writes the root node to block 1 and sets up the next available block as 2. Tomorrow, I’ll start implementing insertion into existing nodes and consider handling node splits when full.
+## 2025-05-02 20:00
+
+**Thoughts So Far:**
+The B-Tree now supports inserting into an empty tree. Today’s goal is to support multiple insertions into the root node and reject inserts when the node is full. I’m assuming the root has room and focusing on correct insertion logic in sorted order.
+
+**Plan:**
+- Read the root node from disk
+- If the node has space, insert the new key/value in sorted order
+- If it’s full, print a message (splitting will be handled tomorrow)
+- Update the node on disk after insertion
+
+**End of Session Reflection:**
+I successfully inserted multiple key/value pairs into the root node, preserving sorted order. The insert function reads the root, updates it in memory, and writes it back to disk. Tomorrow I’ll add node-splitting logic.
+
+
 
 
 
