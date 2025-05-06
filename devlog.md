@@ -61,6 +61,9 @@ The tree now allows inserting into a single leaf node, but we need true B-Tree b
 Root node splitting works! The tree now supports a second level. This required adjusting insert logic, maintaining sorted keys, and correctly writing nodes to disk. I’ve laid the foundation for recursive insertion into child nodes, which comes next.
 
 
-
+## 2025-05-06 17:25
+- Verified complete insert logic for basic B+ tree functionality.
+- Cleaned up code and added documentation.
+- Prepared project for final submission and testing.
 
 

@@ -1,0 +1,8 @@
+5 apple
+3 banana
+8 cherry
+1 date
+4 elderberry
+7 fig
+2 grape
+6 honeydew
