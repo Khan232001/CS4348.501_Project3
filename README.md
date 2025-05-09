@@ -13,48 +13,38 @@ This project implements a persistent B-Tree data structure for indexing key-valu
 - project3.py
 
 # Test Each Command
-a. Insert Command
->>> insert 10 mango
->>> insert 15 kiwi
->>> insert 7 orange
+a. create test_data.txt
+>>> create test_data.txt 
+b. Insert Command
+>>> insert 5 50
+>>> insert 15 100
+>>> insert 20 200
+>>> insert 30 300
+>>> insert 40 400
+>>> insert 50 500
 
-b. Search Command
+c. Search Command
 >>> search 10
-Found: mango
->>> search 5
+Found: 100
+>>> search 2
 Not found
 
-c. Print Tree
+d. Print Tree
 >>> print
-7 : orange
-10 : mango
-15 : kiwi 
+5 : 50
+15 : 100
+20 : 200
+... 
 
-d. Load from File (make sure your test_data.txt contains some data. eg: 
-    5 apple
-    3 banana
-    8 cherry
-    1 date
-    4 elderberry
-    7 fig
-    2 grape
-    6 honeydew)
-then type: 
+e. Load from File test_data.txt
 >>> load test_data.txt
-Loaded 8 items from test_data.txt
+Loaded 6 items from test_data.txt
 
-e. Extract to CSV
+f. Extract to CSV
 >>> extract
 Extracted to output.csv
 
-Now open the file output.csv in your file explorer or Excel. It should contain:
+Now open the file output.csv in your file explorer or Excel. It should contain all the printed numbers. 
 
-python-repl
-Copy code
-Key,Value
-1,date
-2,grape
-3,banana
-...
-f. Exit the Program
+g. Exit the Program
 >>> exit

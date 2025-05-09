@@ -66,4 +66,11 @@ Root node splitting works! The tree now supports a second level. This required a
 - Cleaned up code and added documentation.
 - Prepared project for final submission and testing.
 
+## 2025-05-08 19:00
 
+**Final Fixes and Testing:**
+- Fixed duplicate key handling in both `insert` and `load` commands.
+- Improved error messages for better debugging.
+- Added a friendly exit message for the `exit` command.
+- Cleaned up the project directory for submission.
+- Verified that all commands (`create`, `insert`, `search`, `load`, `print`, `extract`, `exit`) work as expected.

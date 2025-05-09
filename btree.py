@@ -36,6 +36,11 @@ class BTree:
         return self.root.search(key)
 
     def insert(self, key, value):
+        # Prevent duplicate keys
+        if self.search(key) is not None:
+            print(f"Error: Duplicate key {key} not allowed.")
+            return
+
         root = self.root
         if root.is_full():
             s = BTreeNode(self.t, False)
@@ -49,6 +54,11 @@ class BTree:
     def _insert_non_full(self, node, key, value):
         i = len(node.keys) - 1
         if node.leaf:
+            # Prevent duplicate keys in leaf nodes
+            if key in node.keys:
+                print(f"Error: Duplicate key {key} not allowed.")
+                return
+            
             node.keys.append(0)
             node.values.append(0)
             while i >= 0 and key < node.keys[i]:
